@@ -5,6 +5,12 @@
 ```
 .
 +-- app/
+|  +-- assets/
+|  |  +-- images/
+|  |  +-- javascripts/
+|  |  |  +-- application.js
+|  |  +-- stylesheets/
+|  |  |  +-- application.css
 |  +-- controllers/
 |  +-- models/
 |  +-- views/
