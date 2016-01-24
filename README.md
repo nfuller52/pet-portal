@@ -19,6 +19,8 @@
 +-- config/
 |  +-- application.php
 |  +-- autloader.php
++-- lib/
+|  +-- logger.php
 +-- tests/
 |  +-- controllers/
 |  +-- models/
