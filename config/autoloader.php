@@ -26,7 +26,7 @@ class Autoloader {
 
 	}
 
-	private function filename( $class )
+	private static function filename( $class )
 	{
 
 		$base_file_path = strtolower( str_replace( '\\', DIRECTORY_SEPARATOR, $class ) ) . '.php';
