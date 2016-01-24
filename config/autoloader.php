@@ -17,7 +17,7 @@ class Autoloader {
 		$class = preg_replace( '/([a-zA-Z])(?=[A-Z])/', '$1_', $class );
 		$file  = self::filename( $class );
 
-		if( is_file( $file ) ) {
+		if ( is_file( $file ) ) {
 			require_once( $file );
 			return $file;
 		} else {
