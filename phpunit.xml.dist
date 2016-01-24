@@ -8,13 +8,13 @@
 	>
 	<testsuites>
 		<testsuite>
-			<directory prefix="test_" suffix=".php">./tests/</directory>
+			<directory suffix="_test.php">./tests/</directory>
 		</testsuite>
 		<testsuite name="controllers">
-			<directory prefix="test_" suffix=".php">./tests/controllers</directory>
+			<directory suffix="_test.php">./tests/controllers</directory>
 		</testsuite>
 		<testsuite name="models">
-			<directory prefix="test_" suffix=".php">./tests/models</directory>
+			<directory suffix="_test.php">./tests/models</directory>
 		</testsuite>
 	</testsuites>
 </phpunit>
