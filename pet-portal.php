@@ -1,11 +1,11 @@
 <?php
 /*
-Plugin Name: VIP Pet Portal
+Plugin Name: Pet Portal
 Version: 0.0.1
 Description: Pet Portal Integration with WordPress
 Author: Nick Fuller
 Plugin URI: https://www.vippetcare.com
-Text Domain: vip-pet-portal
+Text Domain: pet-portal
  */
 
 namespace PetPortal;
