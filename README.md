@@ -2,24 +2,23 @@
 
 #### MVP Structure
 
-```
-app/
-  controllers/
-  models/
-  views/
-bin/
-  install-wp-tests.sh
-config/
-  application.php
-  autloader.php
-tests/
-  controllers/
-  models/
-  bootstrap.php
-pet-portal.php
-phpunit.xml.dist
-README.md
-```
+.
++-- app/
+|  +-- controllers/
+|  +-- models/
+|  +-- views/
++-- bin/
+|  +-- install-wp-tests.sh
++-- config/
+|  +-- application.php
+|  +-- autloader.php
++-- tests/
+|  +-- controllers/
+|  +-- models/
+|  +-- bootstrap.php
++-- pet-portal.php
++-- phpunit.xml.dist
++-- README.md
 
 [MVC Reference](https://iandunn.name/content/presentations/wp-oop-mvc/mvc.php)
 
