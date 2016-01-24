@@ -2,6 +2,7 @@
 
 #### MVP Structure
 
+```
 .
 +-- app/
 |  +-- controllers/
@@ -19,6 +20,7 @@
 +-- pet-portal.php
 +-- phpunit.xml.dist
 +-- README.md
+```
 
 [MVC Reference](https://iandunn.name/content/presentations/wp-oop-mvc/mvc.php)
 
