@@ -18,7 +18,7 @@
 |  +-- install-wp-tests.sh
 +-- config/
 |  +-- application.php
-|  +-- autloader.php
+|  +-- autoloader.php
 +-- lib/
 |  +-- logger.php
 +-- tests/
