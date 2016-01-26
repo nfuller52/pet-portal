@@ -34,7 +34,7 @@ class Apollo {
 	{
 
 		$options = array(
-			'params' => array(
+			'body' => array(
 				'grant_type' => 'password',
 				'username'   => $username,
 				'password'   => $password,
@@ -49,7 +49,7 @@ class Apollo {
 	{
 
 		$options = array(
-			'params' => array(
+			'body' => array(
 				'grant_type'    => 'refresh_token',
 				'refresh_token' => $refresh_token,
 			),
@@ -65,7 +65,7 @@ class Apollo {
 		if ( is_user_logged_in() ) { return false; }
 
 		$options = array(
-			'params' => array(
+			'body' => array(
 				'token' => $token,
 			),
 			'headers' => array(
