@@ -48,6 +48,8 @@ class Apollo {
 	public function refresh_token( $refresh_token )
 	{
 
+		if ( ! is_user_logged_in() ) { return false; }
+
 		$options = array(
 			'body' => array(
 				'grant_type'    => 'refresh_token',
@@ -62,7 +64,7 @@ class Apollo {
 	public function revoke_token( $token )
 	{
 
-		if ( is_user_logged_in() ) { return false; }
+		if ( ! is_user_logged_in() ) { return false; }
 
 		$options = array(
 			'body' => array(
@@ -70,7 +72,7 @@ class Apollo {
 			),
 			'headers' => array(
 				'Authorization' => 'Bearer ' . $this->current_user_meta['access_token'],
-			);
+			),
 		);
 
 		return $this->client->post( $this->config->revoke_url(), $options );
@@ -90,7 +92,7 @@ class Apollo {
 
 		if ( $this->current_user === false ) { return false; }
 
-		$meta = get_user_meta( $this->current_user->ID, 'apollo', true );
+		$meta = get_user_meta( $this->current_user->ID, 'pet_portal', true );
 		return unserialize( $meta );
 
 	}
