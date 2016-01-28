@@ -14,7 +14,6 @@ class Apollo {
 	 * Stores a configuration object for interacting with WordPress options.
 	 *
 	 * @param PetPortal\App\Lib\Client $client not required by default
-	 * @param PetPortal\App\Lib\Configuration $config not required by default
 	 */
 	public function __construct( $client = null )
 	{
