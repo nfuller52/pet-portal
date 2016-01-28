@@ -8,19 +8,15 @@
 |  +-- assets/
 |  |  +-- images/
 |  |  +-- javascripts/
-|  |  |  +-- application.js
 |  |  +-- stylesheets/
-|  |  |  +-- application.css
 |  +-- controllers/
 |  +-- models/
 |  +-- views/
 +-- bin/
-|  +-- install-wp-tests.sh
 +-- config/
 |  +-- application.php
 |  +-- autoloader.php
 +-- lib/
-|  +-- logger.php
 +-- tests/
 |  +-- controllers/
 |  +-- models/
