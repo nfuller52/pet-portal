@@ -2,7 +2,6 @@
 namespace PetPortal\App\Models;
 
 use PetPortal\Lib\Client;
-use PetPortal\Lib\Configuration;
 
 class Apollo {
 
@@ -17,16 +16,14 @@ class Apollo {
 	 * @param PetPortal\App\Lib\Client $client not required by default
 	 * @param PetPortal\App\Lib\Configuration $config not required by default
 	 */
-	public function __construct( $client = null, $config = null )
+	public function __construct( $client = null )
 	{
 
 		if ( $client === null ) { $client = new Client(); }
-		if ( $config === null ) { $config = new Configuration(); }
 
 		$this->current_user = wp_get_current_user();
 		$this->user_meta    = $this->current_user_meta();
 		$this->client       = $client;
-		$this->config       = $config;
 
 	}
 
@@ -41,7 +38,7 @@ class Apollo {
 			),
 		);
 
-		return $this->client->post( $this->config->token_url(), $options );
+		return $this->client->post( $this->token_url(), $options );
 
 	}
 
@@ -57,7 +54,7 @@ class Apollo {
 			),
 		);
 
-		return $this->client->post( $this->config->token_url(), $options );
+		return $this->client->post( $this->token_url(), $options );
 
 	}
 
@@ -75,7 +72,7 @@ class Apollo {
 			),
 		);
 
-		return $this->client->post( $this->config->revoke_url(), $options );
+		return $this->client->post( $this->revoke_url(), $options );
 
 	}
 
@@ -94,6 +91,30 @@ class Apollo {
 
 		$meta = get_user_meta( $this->current_user->ID, 'pet_portal', true );
 		return unserialize( $meta );
+
+	}
+
+	/**
+	 * The url to connect to Apollo for granting an access token
+	 *
+	 * @return string
+	 */
+	private function token_url()
+	{
+
+		return \PetPortal\apollo_base_url() . 'oauth/token';
+
+	}
+
+	/**
+	 * The url to connect to Apollo for revoking an access token
+	 *
+	 * @return string
+	 */
+	private function revoke_url()
+	{
+
+		return \PetPortal\apollo_base_url() . 'oauth/revoke';
 
 	}
 
