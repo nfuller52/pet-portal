@@ -26,6 +26,13 @@ class Apollo {
 
 	}
 
+	/**
+	 * Makes a call to the access token endpoint on Apollo
+	 *
+	 * @param  string $username The username trying to authenticate
+	 * @param  string $password The password trying to authenticate
+	 * @return array with the JSON response from the server
+	 */
 	public function access_token( $username, $password )
 	{
 
@@ -41,6 +48,14 @@ class Apollo {
 
 	}
 
+	/**
+	 * Makes a call to the access token endpoint on Apollo, but instead of
+	 * getting a new access token, this call uses the refresh token to get
+	 * a new access token.
+	 *
+	 * @param  string $refresh_token The users's refresh token
+	 * @return array with the JSON response from the server
+	 */
 	public function refresh_token( $refresh_token )
 	{
 
@@ -57,6 +72,13 @@ class Apollo {
 
 	}
 
+	/**
+	 * Tells Apollo to revoke the current token. This should be used when
+	 * logging out of WordPRess
+	 *
+	 * @param  string $token The users's current access_token
+	 * @return array with the JSON response from the server
+	 */
 	public function revoke_token( $token )
 	{
 
