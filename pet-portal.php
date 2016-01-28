@@ -14,7 +14,7 @@ use PetPortal\Config\Application;
 
 defined( 'ABSPATH' ) or die( 'It\'s a trap!' );
 define( 'PET_PORTAL_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
-define( 'APOLLO_BASE_URL', 'http://10.0.1.156:3000/' );
+define( 'APOLLO_BASE_URL', 'http://192.168.0.145:3000/' );
 
 require_once( PET_PORTAL_PLUGIN_DIR . '/config/autoloader.php' );
 Config\Autoloader::register();
