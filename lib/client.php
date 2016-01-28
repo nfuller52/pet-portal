@@ -152,7 +152,7 @@ class Client {
 
 		return array(
 			'httpversion' => '1.1',
-			'timeout'     => 30,
+			'timeout'     => 6,
 			'method'      => $method,
 			'body'        => array(),
 			'headers'     => array(),
